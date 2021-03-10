@@ -13,7 +13,7 @@ decryption: ( private key 7 and public key 33 ) M = 3^7 mod 33 = 9
 
 # Technical description of each state
 
-The high level module has 5 inputs 
+The high level module has 5 inputs\
 Input private_key = 16 bits\
 Input public_key = 16 bits.\
 Input message_val = 16 bits.\
