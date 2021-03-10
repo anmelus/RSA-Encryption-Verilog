@@ -42,7 +42,7 @@ Cal_done_state: set Cal_done to high and the output appears on Cal_val. Go back 
 ![alt_text](https://github.com/anmelus/RSA-Encryption-Verilog/blob/main/quartus2.png)
 
 Logic Elements: 385
-Register: 325
+Registers: 325
 Tri-State Buffers: 0
 Memory bits: 0
 
