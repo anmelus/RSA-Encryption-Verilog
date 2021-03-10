@@ -33,7 +33,7 @@ Mod_state2: set the load signal to low
 Mod_state3: monitor myexpo done signal, if done is low jump back to state2 and keep bouncing between state 2 and 3
 Cal_done_state: set Cal_done to high and the output appears on Cal_val. Go back to Capture_state.
 
-## The testbench only models encryption, decryption is simply accomplished by changing which of the provided numbers are passed into each function.
+#### The testbench only models encryption, decryption is simply accomplished by changing which of the provided numbers are passed into each function.
 
 # Synthesis Results:
 
