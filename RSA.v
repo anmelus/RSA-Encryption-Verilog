@@ -278,7 +278,7 @@ always@(posedge clk) begin
 end
 endmodule
 
-module proj2(private_key, public_key, message_val, clk, Rst, Start, Cal_val, Cal_done);
+module RSA(private_key, public_key, message_val, clk, Rst, Start, Cal_val, Cal_done);
 input clk, Rst, Start;
 input[15:0] private_key, public_key, message_val;
 
@@ -290,27 +290,27 @@ RSA main1(private_key, public_key, message_val, clk, Rst, Start, Cal_val, Cal_do
 endmodule
 
 
-module proj2_tb;
+module RSA_tb;
 reg clk, Rst, Start;
 reg[15:0] private_key, public_key, message_val;
 
 wire[15:0] Cal_val;
 wire Cal_done;
 
-proj2 dut(private_key, public_key, message_val, clk, Rst, Start, Cal_val, Cal_done);
+RSA dut(private_key, public_key, message_val, clk, Rst, Start, Cal_val, Cal_done);
 
 always #5 clk = ~clk;
 
 always@(*)
-	case(proj2_tb.dut.main1.state)
-		proj2_tb.dut.main1.Capture_state: $display("State = Capture State");
-		proj2_tb.dut.main1.Exponent_state1: $display("State = Exponent State 1");
-		proj2_tb.dut.main1.Exponent_state2: $display("State = Exponent State 2");
-		proj2_tb.dut.main1.Exponent_state3: $display("State = Exponent State 3");
-		proj2_tb.dut.main1.Mod_state1: $display("State = Mod State 1");
-		proj2_tb.dut.main1.Mod_state2: $display("State = Mod State 2");
-		proj2_tb.dut.main1.Mod_state3: $display("State = Mod State 3");
-		proj2_tb.dut.main1.Cal_done_state: $display("State = Cal Done State");
+	case(RSA_tb.dut.main1.state)
+		RSA_tb.dut.main1.Capture_state: $display("State = Capture State");
+		RSA_tb.dut.main1.Exponent_state1: $display("State = Exponent State 1");
+		RSA_tb.dut.main1.Exponent_state2: $display("State = Exponent State 2");
+		RSA_tb.dut.main1.Exponent_state3: $display("State = Exponent State 3");
+		RSA_tb.dut.main1.Mod_state1: $display("State = Mod State 1");
+		RSA_tb.dut.main1.Mod_state2: $display("State = Mod State 2");
+		RSA_tb.dut.main1.Mod_state3: $display("State = Mod State 3");
+		RSA_tb.dut.main1.Cal_done_state: $display("State = Cal Done State");
 	endcase
 
 initial
