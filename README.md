@@ -13,13 +13,13 @@ decryption: ( private key 7 and public key 33 ) M = 37 mod 33 = 9
 # Technical description of each state
 
 The high level module has 5 inputs 
-Input private_key = 16 bits
-Input public_key = 16 bits. 
-Input message_val = 16 bits. 
-Input clk - 1 bit
-Input Start - 1  bit 
-Input Rst - 1 bit 
-Output Cal_done 1 bit 
+Input private_key = 16 bits\
+Input public_key = 16 bits.\
+Input message_val = 16 bits.\
+Input clk - 1 bit\
+Input Start - 1  bit\
+Input Rst - 1 bit\
+Output Cal_done 1 bit\
 Output Cal_val 16 bit
  
 At reset the FSM resets all the registers.
