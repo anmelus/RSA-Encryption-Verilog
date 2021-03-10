@@ -1,4 +1,4 @@
-//Declare the ports of Half adder module
+//Half adder module
 module half_adder(A, B, S, C);
 
     input A;
